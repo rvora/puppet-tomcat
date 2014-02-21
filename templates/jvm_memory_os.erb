@@ -67,7 +67,7 @@ else {
   $mon++;
   $mon  = sprintf("%02d",$mon);
   $mday = sprintf("%02d",$mday);
-  my $logfile = "/apps/tomcat1/logs/jvm_memory_os-${year}-${mon}-${mday}.log";
+  my $logfile = "@logdir/tomcat/jvm_memory_os-${year}-${mon}-${mday}.log";
 
   my $output;
   $output->{'@source'} = $url;
