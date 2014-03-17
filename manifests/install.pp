@@ -81,7 +81,6 @@ define tomcat::install (
     mode    => '0555',
     content => template('tomcat/jvm_memory_os.erb'),
     require => File["${basedir}/${subdir}"],
-    require => Package["perl-JSON"],
   }
   file { "${basedir}/${subdir}/bin/thread_dump":
     ensure  => present,
